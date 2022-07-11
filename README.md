@@ -27,16 +27,7 @@ We'll be checking what *classes* are present on those items in order to know wha
 
 Did you notice how all three sections listed above have `.color-${n}` classes on them or their elements? That brings us to the CSS, which has those classes, but no actual color assigned to them. Put some code in there to give `color-1` and `color-2` and so on each a background-color... but keep the same class names. That way we can change what `color-3` is any time we want, without having to change the name throughout the code from `purple` to `mauve`. Additionally, this drives home that we're not changing CSS directly... just classes!
 
-Once you've got those colors defined, it's on to layout!
-
-
-### Flex All The Things
-
-This isn't a terribly complex layout, but it's in some ways perfectly suited to Flexbox; we want a single, centered column of elements. (For reference, see the hosted solution!)
-
-You've got a pretty good starting point, in that some previous engineer (before leaving to start his own company, no doubt!) has left behind some CSS to indicate the Flexbox code they were planning to write. You have several rules with `display: flex` in them, but no indication of what particular Flexbox properties they were planning to write.
-
-Your job will be to finish that job. Specifically: the `app` overall is clearly supposed to be one big column. The `headings` maybe too? What about `brush-selection` and `paint`? What alignment and justification rules should they all have, if any? Do your best to copy the layout of the solution, but also... feel free to make different choices!
+Once you've got those colors defined, it's on to the javascript!
 
 
 ### BS Paint's JavaScript
