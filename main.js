@@ -49,8 +49,16 @@ while (count <= gridWidth * gridWidth) {
 // Add queries for all your squares, palette colors, and brush here.
 // (Note the singular or plural used in that sentence!)
 
+let brush = document.querySelector('.current-brush');
+let paletteColors = document.querySelectorAll('.palette div');
+let canvasSquares = document.querySelectorAll('.canvas div');
 
+let app = document.querySelector('.app');
 
+let clearButton = document.querySelector('.clear-button');
+
+//! boolean to test if mouse is down
+let isMouseDown = false;
 /****************************
  * EVENT LISTENER FUNCTIONS *
 ****************************/
@@ -60,6 +68,76 @@ while (count <= gridWidth * gridWidth) {
 // empty at first, though a console.log just to know they're being
 // run as event listeners (after the next step is set up) isn't a
 // bad idea for testing purposes.
+
+brush.addEventListener('click',function(){
+  console.log("Brush selection is working!") // test to see if brush works
+})
+
+
+//* Change the brush color:
+for (let i = 0; i < paletteColors.length; i++) {
+  paletteColors[i].addEventListener('click', function(){
+    console.log(paletteColors[i].classList);
+
+    //* brush.classList.replace(current color to change, newColor)
+    //*-----------------------------------------------------------
+    brush.classList.replace(brush.classList[1], paletteColors[i].classList[1]);
+    //*-----------------------------------------------------------
+  })
+}
+
+//* Change the canvas color:
+for (let i = 0; i < canvasSquares.length; i++) {
+  //canvasSquares[i].addEventListener('click', function(){
+    console.log(canvasSquares[i].classList);
+
+    //* canvas.classList.replace(current color to change, newColor)
+    // //*-----------------------------------------------------------
+    // 
+    // //*-----------------------------------------------------------
+
+// canvasSquares[i].addEventListener('click', function({
+//         isMouseDown = false
+//         canvasSquares[i].classList.replace(canvasSquares[i].classList[1], brush.classList[1]);
+
+// };
+    
+
+
+canvasSquares[i].addEventListener('mouseover', function(){
+      
+      if (isMouseDown === true) {
+        canvasSquares[i].classList.replace(canvasSquares[i].classList[1], brush.classList[1]);
+      }    
+   })
+  }
+
+  app.addEventListener('mousedown', function(){
+    console.log("Mouse is pressed!");
+      isMouseDown = true;
+  });
+
+  app.addEventListener('mouseup', function(){
+    console.log("Mouse is up!");
+       isMouseDown = false;
+  })
+  
+ 
+//* mousedown - checks if user left clicks and holds
+//* mouseup - checks for when user releases that left click. 
+
+
+//!add for loop to make this work
+
+for (let i = 0; i < canvasSquares.length; i++) {
+    
+  clearButton.addEventListener('click', function(){
+        console.log("The clear button has been pressed.")
+          
+          canvasSquares[i].classList.replace(canvasSquares.classList, paletteColors.classList[1]);
+  
+  })
+};
 
 
 

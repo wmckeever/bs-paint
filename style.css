@@ -62,21 +62,49 @@
 }
 
 .color-1 {
-
+background-color: fuchsia;
 }
 
 .color-2 {
-
+background-color: cadetblue
+;
 }
 
 .color-3 {
-
+background-color: orange;
 }
 
 .color-4 {
-
+background-color: greenyellow;
 }
 
 .color-5 {
+background-color: white;
+}
 
+.color-6 {
+background-color: crimson;
+}
+
+.color-7 {
+background-color: orchid;
+}
+
+.color-8 {
+background-color: paleturquoise;
+}
+
+.color-9 {
+background-color: gold;
+}
+
+.color-10 {
+background-color: hotpink;
+}
+
+.clear-canvas{
+ background-color: aqua;
+ margin: 20px;
+ padding: 20px;
+ font-family: Arial, Helvetica, sans-serif;
 }
